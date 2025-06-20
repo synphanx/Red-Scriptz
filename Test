@@ -1,10 +1,12 @@
+local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/ataturk123/GardenSpawner/refs/heads/main/Spawner.lua"))()
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Red Scriptz",
+   Name = "No-Lag",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Welcome to SSHub!",
-   LoadingSubtitle = "by Shxsui",
+   LoadingTitle = "Welcome to NoLagsDupe",
+   LoadingSubtitle = "by synphanx",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
@@ -40,12 +42,62 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Main Dupe", 4483362458) -- Title, Image
 
 
-local Section = Tab:CreateSection("Pet Dupe (you must have the right pets to dupe)")
+local Section = Tab:CreateSection("Seed Spawner")
 
 local Button = Tab:CreateButton({
-   Name = "Start Duping Process with Red Scripts",
+   Name = "Spawn Candy Blossom",
    Callback = function()
-     loadstring(game:HttpGet('https://raw.githubusercontent.com/synphanx/SSHub/refs/heads/main/GAG-PetOwnDupe'))()
+     Spawner.SpawnSeed("Candy Blossom")
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Section = Tab:CreateSection("Pet Spawner")
+
+local Button = Tab:CreateButton({
+   Name = "Spawn raccoon",
+   Callback = function()
+    Spawner.SpawnPet("Raccoon", 2.09, 1) 
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn Dragonfly",
+   Callback = function()
+    Spawner.SpawnPet("Dragonfly", 4.48, 1) 
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn Queen Bee",
+   Callback = function()
+    Spawner.SpawnPet("Queen Bee", 1.48, 1) 
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn Disco Bee",
+   Callback = function()
+    Spawner.SpawnPet("Disco Bee", 3.41, 1) 
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn Butterfly",
+   Callback = function()
+    Spawner.SpawnPet("Butterfly", 1.72, 1) 
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn Red Fox",
+   Callback = function()
+    Spawner.SpawnPet("Red Fox", 2.28, 1) 
    -- The function that takes place when the button is pressed
    end,
 })

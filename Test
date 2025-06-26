@@ -100,6 +100,22 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "Spawn Butterfly",
+   Callback = function()
+    Spawner.SpawnPet("Butterfly", 1.72, 1) 
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn Mimic Octopus",
+   Callback = function()
+    Spawner.SpawnPet("Mimic Octopus", 2.28, 1) 
+   -- The function that takes place when the button is pressed
+   end,
+})
+
 local Tab = Window:CreateTab("Misc", 4483362458) -- Title, Image
 
 local Section = Tab:CreateSection("Miscellaneous (W.I.P.)")
